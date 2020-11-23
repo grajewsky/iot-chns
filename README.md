@@ -1,1 +1,6 @@
-# iot-notifications-server
+
+# IOT Notifications server
+
+## Installation
+
+TO-DO
