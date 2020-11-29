@@ -15,7 +15,8 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->string("message");
+            $table->text("data");
+            $table->enum("type", ["plain", "json"]);
 
             $table->unsignedBigInteger("user_id");
             $table->foreign("user_id")->references("id")->on("users");
@@ -24,6 +25,7 @@ class CreateNotificationsTable extends Migration
             $table->foreign("channel_id")->references("id")->on("channels");
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
