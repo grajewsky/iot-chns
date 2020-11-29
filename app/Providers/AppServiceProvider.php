@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Console\Commands\ChannelsCommand;
+use App\Console\Commands\UsersAttachChannelsCommand;
+use App\Console\Commands\UsersChannelsCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands([ChannelsCommand::class]);
+        $this->commands([
+            ChannelsCommand::class,
+            UsersAttachChannelsCommand::class,
+            UsersChannelsCommand::class,
+        ]);
     }
 }

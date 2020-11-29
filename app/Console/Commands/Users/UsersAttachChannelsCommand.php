@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\Users;
 
 use App\Http\Controllers\ChannelsController;
 use App\Models\Channel;
