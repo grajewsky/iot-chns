@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use App\Console\Commands\ChannelsCommand;
-use App\Console\Commands\UsersAttachChannelsCommand;
-use App\Console\Commands\UsersChannelsCommand;
+use App\Console\Commands\Channels\ChannelsCommand;
+use App\Console\Commands\Users\UsersAttachChannelsCommand;
+use App\Console\Commands\Users\UsersChannelsCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
