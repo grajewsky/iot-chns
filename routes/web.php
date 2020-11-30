@@ -12,7 +12,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->group(['middleware' => ["auth"]], function () use ($router) {
+    $router->get('/users/channels', "UsersController@getAvailableChannels");
+    $router->post("/channels/{name}", "ChannelsController@notify");
 });
