@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Collection;
 use Laravel\Lumen\Auth\Authorizable;
 
 /**
@@ -16,6 +17,7 @@ use Laravel\Lumen\Auth\Authorizable;
  * @property string $name
  * @property string $email
  * @property string $token
+ * @property Collection<Channel> $channels
  */
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
