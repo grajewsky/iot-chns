@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Console\Commands\Channels\ChannelsCreateCommand;
 use App\Console\Commands\Channels\ChannelsListCommand;
+use App\Console\Commands\Users\CreateUserCommand;
 use App\Console\Commands\Users\UsersAttachChannelsCommand;
 use App\Console\Commands\Users\UsersChannelsCommand;
 use App\Console\Commands\Users\UsersListCommand;
@@ -23,7 +24,8 @@ class AppServiceProvider extends ServiceProvider
             ChannelsListCommand::class,
             UsersAttachChannelsCommand::class,
             UsersChannelsCommand::class,
-            UsersListCommand::class
+            UsersListCommand::class,
+            CreateUserCommand::class,
         ]);
     }
 }

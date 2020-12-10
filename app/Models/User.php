@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Laravel\Lumen\Auth\Authorizable;
 
 /**
@@ -40,5 +41,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
             "user_id",
             "channel_id"
         );
+    }
+
+    public static function generateToken(): string
+    {
+        return Str::random(16);
     }
 }
