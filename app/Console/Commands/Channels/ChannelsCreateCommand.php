@@ -8,7 +8,7 @@ use App\Http\Controllers\ChannelsController;
 use App\Models\Channel;
 use Illuminate\Console\Command;
 
-class ChannelsCommand extends Command
+class ChannelsCreateCommand extends Command
 {
     /**
      * The name and signature of the console command.

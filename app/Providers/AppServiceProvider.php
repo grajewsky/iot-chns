@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Console\Commands\Channels\ChannelsCommand;
+use App\Console\Commands\Channels\ChannelsCreateCommand;
 use App\Console\Commands\Channels\ChannelsListCommand;
 use App\Console\Commands\Users\UsersAttachChannelsCommand;
 use App\Console\Commands\Users\UsersChannelsCommand;
@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->commands([
-            ChannelsCommand::class,
+            ChannelsCreateCommand::class,
             ChannelsListCommand::class,
             UsersAttachChannelsCommand::class,
             UsersChannelsCommand::class,
