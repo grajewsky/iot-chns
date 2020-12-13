@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Console\Commands\Channels\ChannelsCreateCommand;
 use App\Console\Commands\Channels\ChannelsListCommand;
+use App\Console\Commands\Notify\NotificationMessage;
 use App\Console\Commands\Users\CreateUserCommand;
 use App\Console\Commands\Users\UsersAttachChannelsCommand;
 use App\Console\Commands\Users\UsersChannelsCommand;
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
             UsersChannelsCommand::class,
             UsersListCommand::class,
             CreateUserCommand::class,
+            NotificationMessage::class
         ]);
     }
 }
