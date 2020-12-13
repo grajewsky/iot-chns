@@ -28,8 +28,14 @@ class NotificationMessage extends Command
             $user = User::query()->where('name', 'LIKE', $userName)->firstOrFail();
 
             $notification = new Notification();
+            $notification->type = $notificationType;
+            $notification->data = $data;
             $notification->channel()->associate($channel);
             $notification->user()->associate($user);
+
+            $notification->save();
+
+            $this->info("Notification added.");
 
         } catch (ModelNotFoundException $exception) {
             $this->error($exception->getMessage());
